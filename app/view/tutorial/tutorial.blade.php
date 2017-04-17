@@ -17,8 +17,13 @@
     <div class="tutorial fade-in fade-out container bordered">
         <span>In this tutorial we are going to setup an authentication module. With this authentication module, users will be able
             to register an account and login. By developing this functionality, we will touch on most of the primary features
-            that this framework has to offer. For the authentication feature, we will use <code>PHP Sentry.</code>
+            that this framework has to offer. For the authentication feature, we will use <code>PHP Sentry.</code> You can pull
+            a copy of this framework from GitHub from the following location:
+            <a href="https://github.com/guillaumezeeman/FrameMe" target="_blank">https://github.com/guillaumezeeman/FrameMe</a>
         </span>
+
+        <br>
+        <br>
         <span>The following features of the <code>FrameMe</code> framework will be covered by this tutorial:</span>
 
         <ul class="covered-features">
