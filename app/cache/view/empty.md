@@ -1,0 +1,1 @@
+# This is simply empty file so that git creates this cache folder.

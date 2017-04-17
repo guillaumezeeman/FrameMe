@@ -1,0 +1,109 @@
+.row {
+    margin: 0;
+}
+
+.navigation-header {
+    display: flex;
+    justify-content: center;
+}
+
+.tutorial-container {
+    background-color: #FEFEFE;
+    border: 1px solid #F2F2F2;
+    border-radius: 6px;
+    padding: 1em 4em;
+}
+
+.frameme-table th, .frameme-table td {
+    padding: .25em .25em;
+}
+
+.frameme-table th:not(:first-child), .frameme-table td:not(:first-child) {
+    padding-left: .5em;
+}
+
+.frameme-table th:not(:last-child), .frameme-table td:not(:last-child) {
+    padding-right: .5em;
+}
+
+.frameme-table thead tr {
+    border-bottom: 1px solid #2EC1FF;
+}
+
+.frameme-table tbody tr:nth-child(odd):hover td {
+    background-color: #fafafa;
+}
+
+.frameme-table tbody > tr:nth-child(even) td {
+    background-color: #efefef;
+}
+
+.frameme-table tbody tr:nth-child(even):hover td {
+    background-color: #e5e5e5;
+}
+
+table .no-break {
+    white-space: nowrap;
+}
+
+.table-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-btn-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 2.25em;
+    min-width: 2em;
+    background-color: #2EC1FF;
+    margin: 0;
+    padding: .25em .5em;
+    border: 1px solid #abe6ff;
+    border-radius: 3px;
+    color: #d5f3ff;
+    transition: background-color ease .35s, color ease .35s, border-color ease .35s;
+}
+
+.table-btn-container .btn.disabled {
+    background-color: #6dd4ff;
+}
+
+.table-btn-container .btn:hover {
+    background-color: #00a9f1;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+.table-btn-container .btn:not(:last-child) {
+    margin-right: .25em;
+}
+
+.table-btn-container .btn .btn-icon {
+    font-weight: bold;
+}
+
+div.tutorial-description {
+    margin: 1em 0;
+    padding-bottom: 1em;
+}
+
+.tutorial-description .description-title {
+    white-space: nowrap;
+    padding-right: .5em;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+
+    color: #157659;
+}
+
+.tutorial-description .tutorial-discription-value {
+    padding-left: .5em;
+}
+
+.pages-overview {
+    width: 100%;
+}

@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    height: 100%;
+}
+
+body {
+    flex: 1;
+    background: url("../images/background_white_line_repeatable_opaque_v2.png");
+}
+
+.align-right {
+    text-align: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-flex-center {
+    justify-content: center;
+}
+
+.justify-flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-bottom {
+    vertical-align: bottom;
+}

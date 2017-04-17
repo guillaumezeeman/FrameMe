@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/",
+      "core\\": "core/"
+    }
+  },
+  "require": {
+    "cartalyst/sentry": "2.1.*",
+    "illuminate/database": "*",
+    "philo/laravel-blade": "*"
+  }
+}

@@ -1,0 +1,111 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100%;
+    background-color: #eeeeee;
+}
+
+.main-container {
+    padding: 3em 0;
+}
+
+.script-name {
+    color: #1a936f;
+}
+
+.content {
+    background-color: #fefefe;
+    border: 1px solid #e5e5e5;
+    padding: 2em;
+    border-radius: 6px;
+}
+
+div.description {
+    border-bottom: 1px solid #157659;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.description-title {
+    padding-right: .5em;
+    text-align: right;
+    font-weight: bold;
+
+    color: #157659;
+}
+
+.discription-value {
+    padding-left: .5em;
+}
+
+.table {
+    margin: 1em;
+    border-radius: 3px;
+}
+
+.table:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.row {
+    margin: 0;
+}
+
+.table .table-header {
+    display: flex;
+    background-color: #1a936f;
+    border: 1px solid #178464;
+    padding: 1em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    color: #fafafa;
+    font-size: 1.2em;
+}
+
+.table-header .title{
+    flex: 1;
+    font-weight: bold;
+}
+
+.table-header .button-group {
+    display: flex;
+}
+
+.table-header .button-group .fa:not(:last-child) {
+    margin-right: .5em;
+}
+
+.table-header .close-table-btn:hover{
+    color: #24cc9a;
+    cursor: pointer;
+}
+
+.columns {
+    padding: .5em 1em;
+    border: 1px solid #1a936f;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.column-table {
+    width: 100%;
+}
+
+.column-table th {
+    padding: .5em 2em .5em 0;
+}
+
+.column-table th div {
+    width: 100%;
+    padding: .25em .5em;
+    border-bottom: 1px solid #EE2E31;
+}
+
+.column-table td {
+    padding: 0 .5em;
+}

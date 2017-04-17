@@ -1,0 +1,157 @@
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    padding: 2em;
+}
+
+.auth-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-content {
+    width: 20%;
+    background-color: #FEFEFE;
+    border: 1px solid #F2F2F2;
+    border-radius: 6px;
+
+    color: #363839;
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+}
+
+.form-container {
+    padding: 2em 2em 1em 2em;
+}
+
+.header {
+    color: #2EC1FF;
+}
+
+.input-header {
+    color: #2EC1FF;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: .25em;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: .75em;
+}
+
+.input-group:hover input.form-control {
+    border: 1px solid #43c7ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+a, a:visited {
+    color: #10b8ff;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: #00a9f1;
+    text-decoration: none;
+}
+
+.input-group input.form-control {
+    padding-left: 3em;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-righr-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+input.form-control:hover, input.form-control:active, input.form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.input-group .icon-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: .72em 1em;
+}
+
+.input-group .input-container {
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid #DDD;
+    padding: .5em;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    padding-left: .5em;
+}
+
+.radio-container input, .radio-container label {
+    margin: 0;
+}
+
+.radio-container input {
+    margin-right: .5em;
+}
+
+.button-container .buttons {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.button-container .btn {
+    align-items: center;
+    justify-content: center;
+
+    min-height: 2.25em;
+    min-width: 3em;
+    background-color: #2EC1FF;
+    margin: 0;
+    padding: .5em 1em;
+    border: 1px solid #abe6ff;
+    border-radius: 3px;
+    color: #d5f3ff;
+    transition: background-color ease .35s, color ease .35s, border-color ease .35s;
+}
+
+.button-container .btn:hover {
+    display: flex;
+    background-color: #00a9f1;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+.button-container .btn:not(:last-child) {
+    margin-right: 1em;
+}
+
+.button-container .btn .btn-icon {
+    font-weight: bold;
+}
