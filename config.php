@@ -4,7 +4,7 @@ $base_dir = __DIR__;
 
 return [
     "base_path"        => $base_dir,
-    "base_url"         => "FrameMe/public/",
+    "base_url"         => "",
     "public_directory" => "{$base_dir}/public",
     "view_directory"   => "{$base_dir}/app/view",
     "cache_directory"  => "{$base_dir}/app/cache/view",
