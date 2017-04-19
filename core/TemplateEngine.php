@@ -4,8 +4,7 @@ namespace core;
 
 use app\model\Category;
 use Cartalyst\Sentry\Facades\Native\Sentry as Sentry;
-use core\database\Connection;
-use core\database\QueryBuilder;
+use core\exception\ViewNotFoundException;
 use Exception;
 use Illuminate\View\Factory;
 use Philo\Blade\Blade;
@@ -24,10 +23,10 @@ class TemplateEngine {
     private static $data  = [];
     
     public static function set_user_information() {
-        if ( ! App::has("user")){
+        if ( ! App::has("user")) {
             static::$data["is_logged_in"] = false;
             static::$data["user"]         = [];
-
+            
             return;
         }
         
@@ -41,10 +40,20 @@ class TemplateEngine {
     }
     
     public static function render($name, $options = []) {
-        $name         = str_replace(".", "/", $name);
         static::$data = $options;
         static::set_user_information();
         static::$data["config"] = App::get("config");
+        
+        if (is_null(static::$factory))
+            static::set_view($name);
+        
+        static::$view = static::$factory->make($name, self::$data);
+        
+        return self::$view->render();
+    }
+    
+    public static function set_view($name) {
+        $name = str_replace(".", "/", $name);
         
         /**
          * @var Blade $blade
@@ -59,11 +68,7 @@ class TemplateEngine {
             $array    = explode("/", $name);
             $template = $array[count($array) - 1];
             
-            throw new Exception("{$template} template does not exist");
+            throw new ViewNotFoundException("{$template} template does not exist");
         }
-        
-        static::$view = static::$factory->make($name, self::$data);
-        
-        return self::$view->render();
     }
 }

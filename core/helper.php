@@ -19,8 +19,8 @@ function view($name, $options = []) {
 
 function asset($uri) {
     $protocol = "http";
-    if (array_key_exists("SERVER_PROTOCOL", $_SERVER))
-        $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"], 0, strpos($_SERVER["SERVER_PROTOCOL"], "/")));
+    if (array_key_exists("HTTPS", $_SERVER) && "on" == strtolower($_SERVER["HTTPS"]))
+        $protocol = "https";
     elseif (array_key_exists("REQUEST_SCHEME", $_SERVER))
         $protocol = strtolower($_SERVER["REQUEST_SCHEME"]);
     

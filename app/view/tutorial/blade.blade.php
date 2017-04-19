@@ -77,9 +77,9 @@
                     &#60;!!td!!&#62;&#123;&#123; $tutorial-!!&#62;get('pages_count') &#125;&#125;&#60;!!/td!!&#62;
                     &#60;!!td!!&#62;
                         &#60;!!div class=!!"table-btn-container"!!&#62;
-                            &#60;!!span class=!!"btn"!!&#62;&#60;!!span class=!!"btn-icon ti-plus disabled"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
+                            &#60;!!span class=!!"btn disabled"!!&#62;&#60;!!span class=!!"btn-icon ti-plus"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
                             &#60;!!a href=!!"&#123;&#123; url('use_case_details', [$tutorial-!!&#62;get('hash')]) &#125;&#125;" class=!!"btn"!!&#62;&#60;!!span class=!!"btn-icon ti-pencil"!!&#62;&#60;!!/span!!&#62;&#60;!!/a!!&#62;
-                            &#60;!!span class=!!"btn"!!&#62;&#60;!!span class=!!"btn-icon ti-trash disabled"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
+                            &#60;!!span class=!!"btn disabled"!!&#62;&#60;!!span class=!!"btn-icon ti-trash"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
                         &#60;!!/div!!&#62;
                     &#60;!!/td!!&#62;
                 &#60;!!/tr!!&#62;
@@ -152,8 +152,8 @@
                     &#60;!!td!!&#62;&#123;&#123; $page-!!&#62;get('description') &#125;&#125;&#60;!!/td!!&#62;
                     &#60;!!td!!&#62;
                         &#60;!!div class=!!"table-btn-container"!!&#62;
-                            &#60;!!span class=!!"btn"!!&#62;&#60;!!span class=!!"btn-icon ti-pencil disabled"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
-                            &#60;!!span class=!!"btn"!!&#62;&#60;!!span class=!!"btn-icon ti-trash disabled"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
+                            &#60;!!span class=!!"btn disabled"!!&#62;&#60;!!span class=!!"btn-icon ti-pencil"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
+                            &#60;!!span class=!!"btn disabled"!!&#62;&#60;!!span class=!!"btn-icon ti-trash"!!&#62;&#60;!!/span!!&#62;&#60;!!/span!!&#62;
                         &#60;!!/div!!&#62;
                     &#60;!!/td!!&#62;
                 &#60;!!/tr!!&#62;

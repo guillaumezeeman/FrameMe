@@ -128,16 +128,12 @@ class <span class="tag">TutorialModule</span> {
         $tutorials     = $query_builder->set_table(Tutorial::class)
             ->query()<span class="bracket">;</span>
 
+        /**
+         * @var <span class="variable">Tutorial $tutorial</span>
+         */
         foreach ($tutorials as $key => $tutorial) {
-            $query_builder = new QueryBuilder()<span class="bracket">;</span>
-            $pages         = $query_builder->set_table(Page::class)
-                ->add_join(TutorialPage::class, "tutorial_page.page_id = page.page_id")
-                ->add_where("tutorial_page.tutorial_id = :tutorial_id")
-                ->add_variables("tutorial_id", $tutorial->get("tutorial_id"))
-                ->query()<span class="bracket">;</span>
-
-            $tutorials[$key]->set("pages", $pages)<span class="bracket">;</span>
-            $tutorials[$key]->set("pages_count", count($pages))<span class="bracket">;</span>
+            $pages = $tutorial-><span class="tag">fetch_pages</span>()<span class="bracket">;</span>
+            $tutorial->set("pages_count", count($pages))<span class="bracket">;</span>
         }
 
         return $tutorials<span class="bracket">;</span>
@@ -145,25 +141,54 @@ class <span class="tag">TutorialModule</span> {
 
     public function <span class="tag">find</span>($hash) {
         $query_builder = new QueryBuilder()<span class="bracket">;</span>
+
+        /**
+         * @var <span class="variable">Tutorial $tutorial</span>
+         */
         $tutorial      = $query_builder->set_table(Tutorial::class)
             ->add_where("hash = :hash")
             ->add_variables("hash", $hash)
             ->set_result_type(<span class="tag">QueryBuilder::QUERY_OPTION_RESULT_SINGULAR</span>)
             ->query()<span class="bracket">;</span>
 
-        $query_builder = new QueryBuilder()<span class="bracket">;</span>
-        $pages         = $query_builder->set_table(Page::class)
-            ->add_join(TutorialPage::class, "tutorial_page.page_id = page.page_id")
-            ->add_where("tutorial_page.tutorial_id = :tutorial_id")
-            ->add_variables("tutorial_id", $tutorial->get("tutorial_id"))
-            ->query()<span class="bracket">;</span>
-
-        $tutorial->set("pages", $pages)<span class="bracket">;</span>
+        $pages = $tutorial-><span class="tag">fetch_pages</span>()<span class="bracket">;</span>
         $tutorial->set("pages_count", count($pages))<span class="bracket">;</span>
 
         return $tutorial<span class="bracket">;</span>
     }
 }
+            </pre>
+        </div>
+
+        <span>At lastly we will implement a function in the <code>Tutorial Model</code> for fetching it's pages from the database. This <code>Method</code> will both return an array of pages and add them to the
+            data collection of the <code>Tutorial model.</code></span>
+        <br>
+        <br>
+        <code class="editor-title">Tutorial.php</code>
+        <div class="editor-container has-title">
+            <pre class="editor config">
+&lt;?php
+
+<span class="variable">namespace app\model</span><span class="bracket">;</span>
+
+use <span class="variable">core\database\QueryBuilder</span><span class="bracket">;</span>
+
+class <span class="tag">Tutorial</span> <span class="keyword">implements</span> <span class="tag">BaseModelInterface</span> {
+
+...
+    public function <span class="tag">fetch_pages</span>() <span class="bracket">:</span> array {
+        $query_builder = new QueryBuilder()<span class="bracket">;</span>
+        $pages         = $query_builder->set_table(Page::class)
+            ->add_join(TutorialPage::class, "tutorial_page.page_id = page.page_id")
+            ->add_where("tutorial_page.tutorial_id = :tutorial_id")
+            ->add_variables("tutorial_id", $this->get("tutorial_id"))
+            ->query()<span class="bracket">;</span>
+
+        $this->set("pages", $pages)<span class="bracket">;</span>
+
+        return $pages<span class="bracket">;</span>
+    }
+...
             </pre>
         </div>
 
